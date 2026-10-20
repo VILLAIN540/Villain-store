@@ -1,1 +1,56 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>BNS Gaming — Like Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">B</span><span>BNS <b>GAMING</b></span></a>
+    <span class="status"><i></i> Online Store</span>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">GAMING SERVICES • FAST • SIMPLE</p>
+      <h1>Level up your<br><span>game profile.</span></h1>
+      <p class="sub">Choose a service, enter your player details, and create an order securely.</p>
+    </section>
+    <section class="panel">
+      <div class="panel-heading"><div><p class="eyebrow">NEW ORDER</p><h2>Order details</h2></div><span class="step">01 / 02</span></div>
+      <form id="order-form">
+        <label for="product">Service</label>
+        <select id="product" required>
+          <option value="Normal Likes">Normal Likes</option>
+          <option value="Auto Likes">Auto Likes (API integration required)</option>
+        </select>
+        <div class="two">
+          <div><label for="uid">Player UID</label><input id="uid" inputmode="numeric" pattern="[0-9]{5,20}" placeholder="Enter numeric UID" required></div>
+          <div><label for="region">Region</label><select id="region" required>
+            <option value="ind">India (IND)</option><option value="bd">Bangladesh (BD)</option><option value="sg">Singapore (SG)</option><option value="id">Indonesia (ID)</option><option value="me">Middle East (ME)</option><option value="br">Brazil (BR)</option><option value="vn">Vietnam (VN)</option><option value="eu">Europe (EU)</option><option value="th">Thailand (TH)</option><option value="cis">CIS</option><option value="pk">Pakistan (PK)</option><option value="na">North America (NA)</option><option value="us">United States (US)</option><option value="uk">United Kingdom (UK)</option>
+          </select></div>
+        </div>
+        <label for="amount">Amount (INR)</label>
+        <input id="amount" type="number" min="1" max="100000" step="1" value="10" required>
+        <button class="primary" type="submit">Create order <span>↗</span></button>
+        <p class="fine">Payment is not considered successful until the provider confirms it server-side.</p>
+      </form>
+      <div id="result" class="result" role="status" aria-live="polite" hidden></div>
+    </section>
+    <section class="info-grid">
+      <article><span class="info-icon">⌁</span><h3>Secure orders</h3><p>Order records are created on the backend.</p></article>
+      <article><span class="info-icon">◎</span><h3>Order tracking</h3><p>Check order status using your order ID.</p></article>
+      <article><span class="info-icon">↗</span><h3>API ready</h3><p>Connect verified payment and authorized delivery APIs.</p></article>
+    </section>
+    <section class="panel tracking">
+      <p class="eyebrow">ORDER LOOKUP</p><h2>Track your order</h2>
+      <form id="track-form" class="track-form"><input id="track-id" placeholder="BNS order ID" required><button class="secondary" type="submit">Check status</button></form>
+      <div id="track-result" class="result" role="status" aria-live="polite" hidden></div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> BNS Gaming. Use only authorized game services.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
