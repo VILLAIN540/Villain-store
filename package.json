@@ -1,0 +1,13 @@
+{
+  "name": "bns-style-gaming-store",
+  "version": "1.0.0",
+  "description": "Free Fire likes store starter inspired by BNS Gaming Store feature set",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "dev": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}
